@@ -19,6 +19,14 @@ public class Pessoa implements Serializable {
 	private String nome;
 
 	private String sobrenome;
+	private Integer idade;
+	
+	public Integer getIdade() {
+		return idade;
+	}
+	public void setIdade(Integer idade) {
+		this.idade = idade;
+	}
 
 	public Long getId() {
 		return id;
@@ -48,7 +56,12 @@ public class Pessoa implements Serializable {
 	public int hashCode() {
 		return Objects.hash(id);
 	}
+	
 
+	@Override
+	public String toString() {
+		return "Pessoa [id=" + id + ", nome=" + nome + ", sobrenome=" + sobrenome + ", idade=" + idade + "]";
+	}
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
