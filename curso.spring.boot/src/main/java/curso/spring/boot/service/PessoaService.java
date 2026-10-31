@@ -1,5 +1,6 @@
 package curso.spring.boot.service;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,5 +21,9 @@ public class PessoaService {
 		 logger.info("Pessoa Salva "+person);
 		 return person;
 		 
+	}
+	
+	public List<Pessoa> listarPessoas(){
+		return pessoaRepository.findAll();
 	}
 }
