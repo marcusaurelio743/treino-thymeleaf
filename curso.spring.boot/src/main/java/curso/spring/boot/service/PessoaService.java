@@ -26,4 +26,16 @@ public class PessoaService {
 	public List<Pessoa> listarPessoas(){
 		return pessoaRepository.findAll();
 	}
+
+	public Pessoa buscaPorId(Long idPessoa) {
+		logger.info("buscando Pessoa pelo id: "+idPessoa);
+		Pessoa p = pessoaRepository.findById(idPessoa).orElseThrow(null);
+		return p;
+	}
+
+	public void deletar(Long idPessoa) {
+		logger.info("Apagando Pessoa pelo id: "+idPessoa);
+		pessoaRepository.deleteById(idPessoa);
+		
+	}
 }
