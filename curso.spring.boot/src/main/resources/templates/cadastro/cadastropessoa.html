@@ -87,7 +87,22 @@
 		  </div>
 		
 	</form>
-	<div class="card">
+	<div class="container">
+  	<div class="row justify-content-center ">
+  	<div class="col-8 " style="padding: 10px; margin-top: 10px;">
+			<div class="form-group">
+				<form action="/buscarPorNome" method="post">
+					<label for="pesquisar">Nome</label>
+		    		<input type="text" class="form-control" name="pesquisarNome" >
+		    		<small id="idade" class="form-text text-muted">informe um nome para pesquisar</small>
+		    		<button type="submit" class="btn btn-success">Buscar</button>
+				</form>
+			</div>
+		</div>
+		</div>
+		
+		<div class="card">
+		
 		<table class="table table-striped">
 			<thead>
 	    		<tr>
@@ -118,6 +133,8 @@
 				</tr>
 			</tbody>
 		</table>
+		</div>
+		
 	</div>
 	<script>
 		// Example starter JavaScript for disabling form submissions if there are invalid fields

@@ -38,4 +38,9 @@ public class PessoaService {
 		pessoaRepository.deleteById(idPessoa);
 		
 	}
+
+	public List<Pessoa> listarPessoaPorNome(String pesquisarNome) {
+		logger.info("buscando pessoas por nome: "+pesquisarNome);
+		return pessoaRepository.buscaPorNome(pesquisarNome);
+	}
 }
